@@ -1,0 +1,101 @@
+
+body {
+    font-family:'Noto Sans JP';
+    
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 520px;
+    justify-content: center;
+    gap: 40px;
+    margin: 80px auto 0;
+}
+
+.header{
+    width: 478px;
+    height: 130px;
+}
+
+.logo11 {
+    width: 119px;
+    height: 34px;
+    outline-style: contain;
+}
+
+.title {
+    font-family: Noto Sans JP;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: -0.75%;
+    color: #0F172A;
+    margin-top: 60px;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    height: 303px;
+    gap:24px;
+}
+
+.input-all{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.input-group{
+    display: flex;
+    flex-direction: column;
+    gap:6px;
+}
+
+.input1{
+    display: flex;
+    border-radius: 6px;
+    border: 1px solid #BAE6FD;
+    font-size: 16px;
+    height: 30px;
+    line-height: 24px;
+    font-weight: 400;
+    padding: 8px 12px ;
+    justify-content: space-between;
+}
+
+.input2{
+    display: flex;
+    border-radius: 6px;
+    border: 1px solid #BAE6FD;
+    font-size: 16px;
+    height: 30px;
+    line-height: 24px;
+    font-weight: 400;
+    padding: 8px 12px ;
+    justify-content: space-between;
+}
+.input:focus{
+    outline-color: #38BDF8;
+}
+
+.login-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    border-radius: 6px;
+    background-color: #0EA5E9;
+    color: #ffffff;
+    padding: 8px 16px;
+    border: 0px;  
+}
+
+.forgot-link {
+    font-weight: 400;
+    color: #0F172A;
+    font-size: 16px;
+    line-height: 24px;
+    border-bottom: 1px solid gray;
+    width: fit-content;
+    
+}
