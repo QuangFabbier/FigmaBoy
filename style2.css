@@ -1,0 +1,90 @@
+:root {
+            --switch-on-color: #0EA5E9; /* Primary color/500 từ Figma */
+            --switch-off-color: #E2E8F0;
+            --knob-color: #FFFFFF;
+            --text-color: #1A202C; /* Màu chữ từ thuộc tính Properties */
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #F7FAFC;
+        }
+
+        /* Container bao quanh theo thiết kế */
+        .toggle-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 12px; /* Khoảng cách giữa switch và label */
+            cursor: pointer;
+            user-select: none;
+        }
+
+        /* Khung Switch (Rectangle 2): 44x24 */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 44px;
+            height: 24px;
+        }
+
+        /* Ẩn checkbox gốc */
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        /* Nền Switch - Radius: 50px */
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: var(--switch-off-color);
+            transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 50px;
+        }
+
+        /* Nút tròn (Ellipse 2): 20x20 */
+        .slider::before {
+            position: absolute;
+            content: "";
+            height: 20px;
+            width: 20px;
+            left: 2px; /* Vị trí Left mặc định */
+            top: 2px;  /* Vị trí Top theo Figma */
+            background-color: var(--knob-color);
+            transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 50%;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Trạng thái Bật */
+        input:checked + .slider {
+            background-color: var(--switch-on-color);
+        }
+
+        /* Di chuyển nút tròn: Từ 2px sang 22px (di chuyển 20px) */
+        input:checked + .slider::before {
+            transform: translateX(20px);
+        }
+
+        /* Chữ "する" bên cạnh */
+        .label-text {
+            font-size: 18px; /* Kích thước chữ chuẩn cho UI */
+            font-weight: 500;
+            color: var(--text-color);
+            line-height: 1;
+        }
+
+        /* Hiệu ứng tương tác nhẹ */
+        .toggle-wrapper:hover .slider {
+            filter: brightness(0.98);
+        }

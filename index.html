@@ -10,26 +10,28 @@
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="repsonsive.css">
         <link rel="stylesheet" href="../css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+        
     </head>
 <body class="main">
     <div class="container">
-        <div class="header">
-            <img class="logo11" src="logo11.png" alt="">
-            <h2 class="title">ログイン</h2>
-        </div>
+    <div class="logo"><img class="logo11" src="logo11.png" alt=""></div>
         <div class="content">
+            <h2 class="title">ログイン</h2>
             <div class="input-all">
                 <div class="input-group">
-                    ユーザーID
-                    <input class="input1" type="text" placeholder="johndo">
+                    <label class="text-input" for="id">ユーザーID</label>
+                    <input class="input" id="id" type="text" placeholder="">
                 </div>
                 <div class="input-group">
-                    パスワード
-                    <input class="input2" type="password" placeholder="" >
+                    <label class="text-input" for="password">パスワード</label>
+                    <input class="input" id="password" type="password" placeholder="" >
                     
                 </div>
             </div>
-            <button class="login-btn">ログイン</button>
+            <button class="login-btn">
+                <span>ログイン</span>
+            </button>
             <span class="forgot-link">
                 パスワードをお忘れですか?
             </span>
